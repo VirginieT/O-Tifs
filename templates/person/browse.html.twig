@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des personnes{% endblock %}
+
+{% block body %}
+<div class="container">
+    {% for label, messages in app.flashes %}
+        {% for message in messages %}
+            <div class="alert alert-{{ label}} alert-dismissible fade show"> 
+                {{ message}}
+            </div>
+        {% endfor %}
+    {% endfor %}
+    <table class="table table-dark table-responsive table-striped table-hover col-12">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Nom</th>
+                <th>Coiffure</th>
+                <th class="text-end">Actions</th>
+            </tr>
+        </thead>
+        <tbody>    
+            {% for person in persons %}    
+            <tr>
+                <td><img src="{{ person.image}}" class="img-fluid" alt="{{ person.name }}" width="100" height="100"></td>
+                <td>{{ person.name }}</td>
+                <td>{{person.coiffure.name}}</td>
+                <td class="text-end">
+                    <a href="{{path ('read_person', {id: person.id})}}" class="btn btn-primary">Voir</a>
+					<a href="{{path ('edit_person', {id: person.id})}}" class="btn btn-primary">Modifier</a>
+					<button class="btn btn-danger dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Supprimer</button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{{path ('delete_person', {id: person.id})}}">Confirmer</a></li>
+                    </ul>
+				
+				</td>
+            </tr> 
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

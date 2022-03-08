@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Client{% endblock %}
+
+{% block body %}
+<div class="container">
+    <table class="table table-dark table-responsive table-striped table-hover col-12">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Nom</th>
+                <th>Coiffure</th>
+            </tr>
+        </thead>
+        <tbody>       
+            <tr>
+                <td><img src="{{ person.image}}" class="img-fluid" alt="{{ person.name }}"></td>
+                <td>{{ person.name }}</td>
+                <td>{{ person.coiffure.name }}</td>
+            </tr> 
+        </tbody>
+    </table>
+</div>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html.twig'%}
+
+{% block title %} MAJ Personne {% endblock %}
+
+{% block body %}
+
+<div class="container">
+
+{{ form_start(form) }}
+    {{ form_row(form.name)}}
+    {{ form_row(form.coiffure)}}
+    {{ form_row(form.image)}}
+    <button class="btn btn-primary"> Finaliser </button>
+{{ form_end(form)}}
+</div>
+{% endblock %}

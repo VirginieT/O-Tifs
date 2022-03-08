@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Clients possédant cette coiffure{% endblock %}
+
+{% block body %}
+<div class="container">
+    <table class="table table-dark table-responsive table-striped table-hover col-12">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Nom</th>
+            </tr>
+        </thead>
+        <tbody>    
+            {% for person in coiffure.persons %}    
+            <tr>
+                <td><img src="{{ person.image}}" class="img-fluid" alt="{{ person.name }}" width="100" height="100"></td>
+                <td>{{ person.name }}</td>
+            </tr> 
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
