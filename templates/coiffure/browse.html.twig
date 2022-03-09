@@ -3,7 +3,7 @@
 {% block title %}Liste des coiffures et couleurs disponibles{% endblock %}
 
 {% block body %}
-<div class="container">
+<div class="container" style="margin-bottom: 11.5rem;">
     {% for label, messages in app.flashes %}
         {% for message in messages %}
             <div class="alert alert-{{ label}} alert-dismissible fade show"> 

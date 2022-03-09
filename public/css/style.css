@@ -208,7 +208,7 @@ body {
   line-height: 1.7;
   color: #364d59 !important;
   font-weight: 300;
-  font-size: 1rem; }
+  font-size: 1.3rem; }
 
 ::-moz-selection {
   background: #000;
@@ -360,7 +360,7 @@ h1, h2, h3, h4, h5,
       right: 0;
       bottom: 0;
       z-index: 0;
-      width: 100%;
+      width: 10%;
       background: rgba(0, 0, 0, 0.7); }
   .bg-image > .container {
     position: relative;
@@ -368,11 +368,11 @@ h1, h2, h3, h4, h5,
 
 @media (max-width: 991.98px) {
   .img-md-fluid {
-    max-width: 100%; } }
+    max-width: 10%; } }
 
 @media (max-width: 991.98px) {
   .display-1, .display-3 {
-    font-size: 3rem; } }
+    font-size: rem; } }
 
 .play-single-big {
   width: 90px;
