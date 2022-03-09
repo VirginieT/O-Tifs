@@ -25,8 +25,8 @@
                 <td>{{ coiffure.name }}</td>
                 <td>{{ coiffure.color }}</td>
                 <td class="text-end">
-                    <a href="{{path ('read_coiffure', {id: coiffure.id})}}" class="btn btn-primary">Voir</a>
-					<a href="{{path ('edit_coiffure', {id: coiffure.id})}}" class="btn btn-primary">Modifier</a>
+                    <a href="{{path ('read_coiffure', {id: coiffure.id})}}" class="btn btn-info">Voir</a>
+					<a href="{{path ('edit_coiffure', {id: coiffure.id})}}" class="btn btn-info">Modifier</a>
 					<button class="btn btn-danger dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Supprimer</button>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="{{path ('delete_coiffure', {id: coiffure.id})}}">Confirmer</a></li>

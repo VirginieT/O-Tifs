@@ -33,7 +33,7 @@ class AppFixtures extends Fixture
             'Brosse',
             'Boule à zéro',
             'Carré',
-            'Couette',
+            'Couettes',
             'Dreadlocks',
         ];
 
