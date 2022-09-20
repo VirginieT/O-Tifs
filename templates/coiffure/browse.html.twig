@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Liste des coiffures et couleurs disponibles{% endblock %}
+{% block title %} Liste des coiffures et couleurs disponibles{% endblock %}
 
 {% block body %}
-<div class="container" style="margin-bottom: 11.5rem;">
+<div class="container" style="margin-bottom: 7rem;">
     {% for label, messages in app.flashes %}
         {% for message in messages %}
             <div class="alert alert-{{ label}} alert-dismissible fade show"> 
@@ -31,7 +31,6 @@
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="{{path ('delete_coiffure', {id: coiffure.id})}}">Confirmer</a></li>
                     </ul>
-				
 				</td>
             </tr> 
             {% endfor %}
