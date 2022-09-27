@@ -27,17 +27,25 @@ class AppFixtures extends Fixture
 
         $coiffures = [
             'Afro',
-            'Asymétrique',
-            'Banane',
-            'Bol',
-            'Brosse',
-            'Boule à zéro',
             'Carré',
             'Couettes',
+            'Longs',
+            'Bol',
             'Dreadlocks',
+            'Carré',
+            'Couettes',
+            'Longs',
         ];
 
-        $coiffuresObject = [];
+        $coiffuresObject = [
+            'AfroGreg.png',
+            'CarréLoic.png',
+            'CouettesCécile.png',
+            'LongsRémi.png',
+            'DoubleCouetteJulien.png',
+            'DreadSolene.png',
+            'BouleZéroAlexis.png',
+        ];
 
         foreach($coiffures as $currentCoiffure)
         {
@@ -55,6 +63,13 @@ class AppFixtures extends Fixture
             $coiffureIndex= array_rand($coiffures);
             $person->setCoiffure($coiffuresObject[$coiffureIndex]);
             $manager->persist($person);
+        }
+
+        foreach ($coiffuresObject as $currentCoiffureObject) 
+        {
+            $coiffureObject = new Coiffure();
+            $coiffureObject->setName($currentCoiffureObject);
+            $manager->persist($coiffureObject);
         }
 
         $manager->flush();
